@@ -18,9 +18,9 @@
 
 	</section>
 
-	<section class="user-postcode" ng-show="userCoordinates">
+	<section class="user-postcode" ng-show="userCoordinates || locationWasAttempted">
 		
-		<label for="userPostcode" class="heading -medium user-postcode__intro">Not close enough? Try your postcode instead.</label>
+		<label for="userPostcode" class="heading -medium user-postcode__intro">Not good enough? Try your postcode instead.</label>
 		 
 		<form class="form-inline" name="postcodeForm">
 			<fieldset class="form-group">

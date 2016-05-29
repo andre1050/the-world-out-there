@@ -3,12 +3,16 @@
 function SearchCtrl($scope, LocationService) {
 	"ngInject"
 
+    // Boolean to save the state of geolocation attempt
+    $scope.locationWasAttempted = false;
+
     // Get user"s location using device"s geolocation
     $scope.getUserLocation = () => {
         LocationService.getUserLocation()
         .then(coordinates => {
             $scope.userCoordinates = coordinates;
         }).catch(errorMsg => {
+            $scope.locationWasAttempted = true;
             $scope.locationError = errorMsg;
         });
     };
