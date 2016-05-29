@@ -6,7 +6,7 @@ TWOT is a working prototype of a social media app that pulls trending venues for
 
 [Live Demo](http://andretc.com/demos/twot/)
 
-NOTE: Geolocation may not work in the live demo if your browser implements the "Prefer Secure Origins For Powerful New Features" recommendation from the Chromium Security team. This is because I don't yet run my website (where the demo is hosted) over SSL. Sorry about that. It will work locally (instructions below) or on any other web server with SSL enabled.
+NOTE: Geolocation may not work in the live demo if your browser implements the [Prefer Secure Origins For Powerful New Features](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features) recommendation from the Chromium Security team. This is because I don't yet run my website (where the demo is hosted) over SSL. Sorry about that. It will work locally (instructions below) or on any other web server with SSL enabled.
 
 [Screenshot 1](http://andretc.com/demos/twot/twot_screen1.png)
 [Screenshot 2](http://andretc.com/demos/twot/twot_screen2.png)
