@@ -1,0 +1,61 @@
+<section class="results-view">
+	
+	<section ng-hide="trendingVenues.length">
+		
+		<h3 class="heading -medium" >Holly cr*p, there's literally nothing trending where you are.<br/>Thank baby Jesus for pizza and Netflix.</h3>
+
+		<p class="disclaimer">FYI: this is based on Foursquare's <a href="https://developer.foursquare.com/docs/venues/trending" class="disclaimer__keyword" target="_blank">Trending Venues</a>, which looks only at the number of Foursquare users currently in those places. It's perfectly possible, and likely, that there will be other people there.</p>
+
+		<p ng-show="venuesError" class="user-message-error">{{ venuesError }}</p>
+
+		<p>
+			<a ui-sref="Search" class="btn btn-default btn-continue">Try Again</a>
+		</p>
+
+	</section>
+
+	<section ng-show="trendingVenues.length">
+
+		<h3 class="heading -medium">Here's some trending venues near you. Go nuts.</h3>
+
+		<p class="disclaimer">FYI: this is based on Foursquare's <a href="https://developer.foursquare.com/docs/venues/trending" class="disclaimer__keyword" target="_blank">Trending Venues</a>, which looks only at the number of Foursquare users currently in those places. It's perfectly possible, and likely, that there will be other people there.</p>
+
+		<p ng-show="venuesError" class="user-message-error">{{ venuesError }}</p>
+
+		<div class="row">
+			<article class="col-xs-12 col-sm-4 trending-venue trending-venue--venue{{ $index + 1 }}" ng-repeat="venue in trendingVenues">
+				
+				<h3 class="heading -medium trending-venue__name">{{ venue.name }}</h3>
+				<p>
+					{{ venue.location.address }}<br/>
+					{{ venue.location.city }}<span ng-show="venue.location.city">, {{ venue.location.country }}</span>
+				</p>
+				<p>Check-Ins: {{ venue.stats.checkinsCount | number }} ({{ venue.hereNow.count | number }} there now)</p>
+				<p>Distance: {{ venue.location.distance | number }} meters</p>
+				
+				<p ng-show="venue.url">
+					<a href="{{ venue.url }}" class="btn btn-default btn-continue" target="_blank">Website</a>
+				</p>
+
+				<section ng-show="venue.photos.length">
+					
+					<p class="heading -medium trending-venue__heading">Recent Pictures:</p>
+					
+					<div class="col-xs-6 col-sm-4 trending-venue__photo" ng-repeat="photo in venue.photos | limitTo: 9">
+						<a href="{{ photo.link }}" target="_blank">
+							<img ng-src="{{ photo.images.thumbnail.url }}" class="trending-venue__image" title="Posted by {{ photo.user.username }} on {{ photo.created_time * 1000 | date: 'd MMM, y h:mm:ss a' }}" />
+						</a>
+					</div>
+
+				</section>
+
+				<section ng-hide="venue.photos.length">
+					<p class="heading -medium trending-venue__heading">Sorry, no recent pictures</p>
+				</section>
+
+			</article>
+		</div>
+
+	</section>
+
+</section>

@@ -1,0 +1,5 @@
+<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ googleMapsUrl }}">
+	<ng-map center="{{ latitude }},{{ longitude }}" zoom="16" class="location-map">
+		<marker position="{{ latitude }},{{ longitude }}" centered="true"></marker>
+	</ng-map>
+</div>

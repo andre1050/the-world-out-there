@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title ng-bind="pageTitle"></title>
+        <meta name="description" content="Explore trending venues around you.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    
+        <div class="container">
+
+            <div class="row">
+                <header class="col-xs-12">
+
+                    <hgroup class="header">
+                        <h1 class="heading -large header__title">
+                            <a href="./" class="header__anchor">The World Out There</a>
+                        </h1>
+                        <h2 class="heading -medium header__tagline">Explore trending venues around you.</h2> 
+                    </hgroup>
+
+                    <section class="intro">
+                        <p class="intro__text"><span class="intro__keyword">T.W.O.T.</span> will determine your location and search Foursquare for <span class="intro__keyword">trending venues</span> around you.<br/>The results will be paired with <span class="intro__keyword">recent pictures</span> on Instagram to give you an idea of what's going on there.</p>
+                        <p class="intro__text"><span class="intro__keyword">Hey, listen up:</span> this app is a proof of concept and not intended for production or distribution.</p>
+                    </section>
+
+                </header>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div ui-view></div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

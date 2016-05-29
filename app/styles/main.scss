@@ -1,0 +1,95 @@
+@import "vars";
+@import "typography";
+@import "node_modules/bootstrap/dist/css/bootstrap";
+
+body {
+  font-family: $font-text;
+  color: $light;
+  background-color: $dark;
+  font-size: $font-size--sm;
+}
+
+.btn-continue { font-family: $font-headings; }
+
+.header {
+	.header__title { margin-bottom: 0; }
+	.header__tagline { margin-top: 0; }
+	.header__anchor {
+		color: $light;
+		&:hover, &:focus, &:active { 
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+}
+
+.intro {
+	margin: 20px auto 20px;
+	padding-bottom: 0;
+	border-bottom: 1px solid $light;
+	.intro__text { margin: 20px auto; }
+	.intro__keyword { 
+		font-family: $font-headings;
+		font-weight: normal;
+		border-bottom: 1px dotted $light;
+	}
+}
+
+.user-message-error { color: $red; }
+
+.user-location {
+	.user-location__place { margin: 10px auto; }
+}
+
+.location-map {
+	width: 100%;
+	max-width: 600px;
+}
+
+.user-postcode {
+	.user-postcode__intro { margin-top: 20px; }
+	.user-postcode__input {
+		width: 200px;
+		float: left;
+		margin-right: 10px;
+		&.ng-valid.ng-dirty { border: 1px solid $green; }
+		&.ng-invalid.ng-dirty { border: 1px solid $red; }
+	}
+}
+
+.find-trends { margin-top: 10px; }
+
+.disclaimer {
+	margin: 20px auto;
+	.disclaimer__keyword {
+		font-family: $font-headings;
+		font-weight: normal;
+		border-bottom: 1px dotted $light;
+		color: $light;
+		&:hover, &:focus, &:active { 
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+}
+
+.trending-venue {
+	margin-bottom: 20px;
+	&:nth-child(3n+4) { clear: left; }
+	.trending-venue__heading { margin-top: 20px; }
+	.trending-venue__name {
+		height: 51px;
+		overflow: hidden;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted $light;
+	}
+	.trending-venue__image {
+		width: 100%;
+		height: auto;
+		display: inline-block;
+		border: 1px solid $light;
+		border-radius: 5px;
+		
+	}
+	.trending-venue__photo { padding: 2px; }
+}

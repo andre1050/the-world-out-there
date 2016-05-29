@@ -1,0 +1,39 @@
+<section class="search-view">
+	
+	<h3 class="heading -medium">Let's get started. Where are you?</h3>
+
+	<p>
+		<button ng-click="getUserLocation()" class="btn btn-default btn-continue">Find Me</button>
+	</p>
+
+	<p ng-show="locationError" class="user-message-error">{{ locationError }}</p>
+
+	<section class="user-location" ng-show="userPlaceName">
+		
+		<p class="user-location__venue">We found you at {{ userPlaceName }}.</p>
+		
+		<div ng-if="userCoordinates">
+			<location-map></location-map>
+		</div>
+
+	</section>
+
+	<section class="user-postcode" ng-show="userCoordinates">
+		
+		<label for="userPostcode" class="heading -medium user-postcode__intro">Not close enough? Try your postcode instead.</label>
+		 
+		<form class="form-inline" name="postcodeForm">
+			<fieldset class="form-group">
+				<input id="userPostcode" class="form-control user-postcode__input" type="text" name="postcode" placeholder="e.g. EC2A 4QS" ng-pattern="/^[a-z]{1,2}[0-9][a-z0-9]?\s?[0-9][a-z]{2}$/i" required ng-minlength="5" ng-maxlength="8" ng-model="userPostcode" />
+				<button ng-click="getCoordinatesByPostcode()" class="btn btn-default btn-continue" ng-disabled="postcodeForm.$invalid">Let's Go</button>
+			</fieldset>
+		</form>
+
+	</section>
+
+	<p ng-show="userCoordinates">
+		<a ui-sref="Results({ latitude: userCoordinates.latitude, longitude: userCoordinates.longitude })" class="btn btn-default btn-continue find-trends">Find Trends</a>
+	</p>
+	
+
+</section>
