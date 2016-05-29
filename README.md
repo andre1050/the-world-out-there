@@ -26,16 +26,19 @@ TWOT was built on top of Jake Marsh's cool [boilerplate](https://github.com/jake
 - Instagram
 
 #### Oh I see. But how does it work, I mean, specifically?
-1. TWOT geolocates you if your device supports and you let it
+1. TWOT geolocates you if your device supports that and you let it
 2. If not, or if the geolocation isn't accurate enough, you can enter a UK postcode
 3. A list of trending venues is pulled from Foursquare, all of which within a 2000m radius from you
 4. For each venue we'll ping the Instagram API for the most recent pictures take there
-5. You can see what venues are trending, how to find them and what the patrons are up to
+5. You see what venues are trending, how to find them and what the patrons are up to
 
 #### Rock on! So what if I want to run this locally?
 You totally can, and I'd love it if you did. It should be pretty straightforward if you follow the steps below:
+
 1. Clone this repository using `git clone https://github.com/andre1050/the-world-out-there.git`
+
 2. Run `npm install` from the root directory
+
 3. Create your own acess keys and tokens for the different APIs and update the `\app\js\constants.js` file accordingly:
     - API Key for [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
     - Client ID and Secret for [Foursquare](https://foursquare.com/developers/apps)
