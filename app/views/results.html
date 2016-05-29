@@ -1,6 +1,6 @@
 <section class="results-view">
 	
-	<section ng-hide="trendingVenues.length">
+	<section ng-show="trendingVenues.length < 1">
 		
 		<h3 class="heading -medium" >Holly cr*p, there's literally nothing trending where you are.<br/>Thank baby Jesus for pizza and Netflix.</h3>
 
@@ -50,7 +50,7 @@
 				</section>
 
 				<section ng-hide="venue.photos.length">
-					<p class="heading -medium trending-venue__heading">Sorry, no recent pictures</p>
+					<p class="heading -medium trending-venue__heading">Sorry, we couldn't find this venue on Instagram</p>
 				</section>
 
 			</article>
