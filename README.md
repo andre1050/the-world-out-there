@@ -45,9 +45,10 @@ You totally can, and I'd love it if you did. It should be pretty straightforward
     - Access Token for Instagram
         - [Register your client](https://www.instagram.com/developer/clients/manage)
         - [Generate your token](http://instagram.pixelunion.net)
+
 4. Run `gulp dev` to start the dev server and spin up a new browser tab
 
-If you want to run the unit tests, type `gulp unit`. Refer to [Jake's repo](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) for details.
+If you want to run the unit tests, type `gulp unit`. I will be adding more soon. Refer to [Jake's repo](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate) for other build details.
 
 #### My mind is blown. Is there a roadmap for this?
 - Giving the whole thing a nice design would be cool. That result set could use with a proper gallery instead of a list of thumbnails. Maybe add a map to each venue as well. This is a proof of concent so I focused on the basic features. I will eventually get to the design bits.
