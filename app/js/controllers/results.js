@@ -49,8 +49,10 @@ function ResultsCtrl($scope, $stateParams, $location, VenuesService) {
 
     // Return VM for testing
     const vm = this;
-    vm.title = "Trending Venues";
-    vm.scope = $scope;
+    vm.scope = {
+        getTrendyNearbyVenues: getTrendyNearbyVenues,
+        getPhotosByCoordinates: getPhotosByCoordinates
+    };
 
 }
 

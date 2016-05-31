@@ -32,7 +32,7 @@ function VenuesService(AppSettings, NameMatchingService, $q, $http) {
 		});
 	};
 
-	// Return a set of photos matching a set of coodinates
+	// Return a set of photos matching a set of coordinates
 	service.getPhotosByCoordinates = (venueName, venueCoordinates) => {
 		let errorMsg;
 		return $q((resolve, reject) => {

@@ -50,8 +50,11 @@ function SearchCtrl($scope, LocationService) {
 
     // Return VM for testing
     const vm = this;
-    vm.title = "Location";
-    vm.scope = $scope;
+    vm.scope = {
+        getUserLocation: $scope.getUserLocation,
+        getPlaceNameByCoordinates: getPlaceNameByCoordinates,
+        getCoordinatesByPostcode: $scope.getCoordinatesByPostcode
+    };
 
 }
 

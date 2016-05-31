@@ -20,4 +20,8 @@ describe("Unit: NameMatchingService", function() {
 		expect(service).toBeDefined();
 	});
 
+	it("should have a method to return a venue name match", function() {
+		expect(service.getMatchingVenue).toEqual(jasmine.any(Function));
+	});
+
 }); 

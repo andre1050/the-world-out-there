@@ -5,14 +5,14 @@ function NameMatchingService() {
 
 	const service = {};
 
-	// Simplify a venue name by converting to lowercase and remove all spaces;
+	// Simplify a venue name by removing all non-alphanumerical characters and lowercasing everything
 	var simplifyVenueName = venueName => {
-		return venueName.toLowerCase().replace(/ /g,"");
+		return venueName.toLowerCase().replace(/[\W_]+/g,"");
 	};
 
 	// Return a Instagram location ID for a Foursquare set of venue coordinates
 	service.getMatchingVenue = (venueToMatch, venuesArr) => {
-		
+
 		let venueId;
 		venuesArr.forEach(venueInArr => {
 			// TODO: the matching algorithm could be greatly improved to ensure

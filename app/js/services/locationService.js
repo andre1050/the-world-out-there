@@ -10,7 +10,7 @@ function LocationService(AppSettings, $q, $http) {
 		return "https://maps.google.com/maps/api/js?key=" + AppSettings.oAuthDetails.googleMaps.key;
 	};
 
-	// Return user"s current location if device supports geolocation
+	// Return user's current location if device supports geolocation
 	service.getUserLocation = () => {
 		let errorMsg;
 		return $q((resolve, reject) => {

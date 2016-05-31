@@ -20,4 +20,12 @@ describe("Unit: VenuesService", function() {
 		expect(service).toBeDefined();
 	});
 
+	it("should have a method to return a list of trendy nearby venues for a set of coordinates", function() {
+		expect(service.getTrendyNearbyVenues).toEqual(jasmine.any(Function));
+	});
+
+	it("should have a method to return a list of photos matching a set of coordinates", function() {
+		expect(service.getPhotosByCoordinates).toEqual(jasmine.any(Function));
+	});
+
 }); 
