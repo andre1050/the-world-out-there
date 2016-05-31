@@ -1,6 +1,6 @@
 # The World Out There
 ---
-TWOT is a working prototype of a social media app that pulls trending venues for a given location and pairs the results with recent pictures from Instagram. It will help you find cool nearby places and show you what  people are posting from there. It is built in Angular and written in ES2015. It is a proof of concept and not meant for production or distribution.
+T.W.O.T. is a working prototype of a social media app that pulls trending venues for a given location and pairs the results with recent pictures from Instagram. It will help you find cool nearby places and show you what  people are posting from there. It is built in Angular and written in ES2015. It is a proof of concept and not meant for production or distribution.
 
 ![Image of Yaktocat](http://andretc.com/demos/twot/twot_cover.png)
 
