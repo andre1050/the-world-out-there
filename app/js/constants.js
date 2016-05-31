@@ -4,19 +4,19 @@ const AppSettings = {
 		googleMaps: {
 			// GET YOURS: 
 			// https://developers.google.com/maps/documentation/javascript/get-api-key
-			key: "AIzaSyCiFlWyBQo6WAdmH193X4WTZoVReWDA5_M"
+			key: "ADD_YOURS_HERE"
 		},
 		foursquare: {
 			// GET YOURS:
 			// https://foursquare.com/developers/apps
-			clientId: "FSTGEYZR5KYDVECHOXQQXAE2DQ130QWOOV13ANORZ0PL3P5K",
-			clientSecret: "VID0WYBJYGNKUVASMGWAADSDWZXTSL3KTM3CUCEGLTONOGDU"
+			clientId: "ADD_YOURS_HERE",
+			clientSecret: "ADD_YOURS_HERE"
 		},
 		instagram: {
 			// GET YOURS:
 			// https://www.instagram.com/developer/clients/manage
 			// http://instagram.pixelunion.net
-			accessToken: "34868298.1677ed0.9262d5653c2e44b0905c3a945147350a"
+			accessToken: "ADD_YOURS_HERE"
 		}
 	}
 };
